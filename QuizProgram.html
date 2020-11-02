@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Quiz Program</title>
+    <script>
+      var score = 0;
+      var questionCount = 0;
+      function gradeQuiz()
+      {
+        var answer = document.getElementById("answer").value;
+        if(questionCount == 0)
+        {
+          if(answer == 4)
+          {
+            score = score + 1;
+          }
+          document.getElementById("question").innerHTML = "How many states in USA?";
+        }
+        if(questionCount == 1)
+        {
+          if(answer == 50)
+          {
+            score = score + 1;
+          }
+            document.getElementById("question").innerHTML = "How many continents?";
+        }
+        if(questionCount == 2)
+        {
+          if(answer == 7)
+          {
+            score = score + 1;
+          }
+            end();
+        }
+        questionCount = questionCount + 1;
+      }
+      function end()
+      {
+          document.getElementById("question").style.visibility = "hidden";
+          document.getElementById("button").style.visibility = "hidden";
+          document.getElementById("answer").style.visibility = "hidden";
+          document.getElementById("end").innerHTML = "You scored a " + score + "/3";
+          document.getElementById("end1").innerHTML = "Answers-";
+          document.getElementById("end2").innerHTML = "How many oceans are there? 4";
+          document.getElementById("end3").innerHTML = "How many states in USA? 50";
+          document.getElementById("end4").innerHTML = "How many continents? 7";
+      }
+    </script>
+    <link rel="stylesheet" href="Quiz.css">
+  </head>
+
+  <body>
+    <h2 id = "title">Fun Quiz!</h2>
+    <span id = "question">How many oceans are there?</span>
+    <input type = "text" id = "answer">
+    <input id = "button" type = "button" value = "Submit Answer" onclick = "gradeQuiz()">
+      <span id = "end"></span>
+      <span id = "end1"></span>
+      <span id = "end2"></span>
+      <span id = "end3"></span>
+      <span id = "end4"></span>
+  </body>
+</html>

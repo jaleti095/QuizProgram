@@ -1,0 +1,58 @@
+body {
+  background-color: orange;
+}
+
+#title {
+  color: black;
+  font-size: 40px;
+}
+
+#button {
+  background-color: black;
+  font-size: 20px;
+  color: yellow;
+}
+
+#question {
+  font-size: 20px;
+  color: blue;
+}
+
+#end {
+  color: red;
+  font-size: 30px;
+  float: left;
+}
+#end1 {
+  color: black;
+  font-size: 30px;
+  float: left;
+}
+#end2 {
+  color: blue;
+  font-size: 30px;
+  float: left;
+}
+#end3 {
+  color: yellow;
+  font-size: 30px;
+  float: left;
+}
+#end4 {
+  color: green;
+  font-size: 30px;
+  float: left;
+}
+
+#title{
+    animation:blinkingText 1.7s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: red; }
+    72%{    color: blue;}
+    84%{    color: green; }
+    99%{    color: yellow;  }
+    100%{   color: #000;    }
+}
